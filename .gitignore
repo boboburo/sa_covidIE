@@ -4,6 +4,6 @@
 inst/doc
 
 # ignore data
-.csv
-.db
-.sqlite
+*.csv
+*.db
+*.sqlite
