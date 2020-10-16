@@ -2,3 +2,8 @@
 .RData
 .Rproj.user
 inst/doc
+
+# ignore data
+.csv
+.db
+.sqlite
