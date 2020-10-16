@@ -10,8 +10,18 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here 
     fluidPage(
-      h1("covidIE")
-    )
+      
+      fluidRow(wellPanel("Covid Ireland")),
+      fluidRow(wellPanel("Scatter Plot Here")),
+      fluidRow(column(width = 3, wellPanel("Bottom row, column 1, width 4")),
+               column(width = 9, wellPanel(
+                 tabsetPanel(type = "tabs",
+                             tabPanel("Daily Rate", 
+                                      mod_dataviz_bar_ui("dataviz_bar_ui_1")),
+                             tabPanel("Explore Cases",   
+                                      mod_dataviz_bar_ui("dataviz_bar_ui_2", label = "Something Else")))
+               ))
+      ))
   )
 }
 

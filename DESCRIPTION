@@ -1,17 +1,23 @@
 Package: covidIE
-Title: An Amazing Shiny App
+Title: COVID IRELAND DASHBOARD
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
+Authors@R: person('Brian', 'Carter', email = 'brianthomascarter@gmail.com', role = c('cre', 'aut'))
+Description: Shiny application to display COVID Irleand numbers.
 License: What license is it under?
 Imports: 
     config,
     golem,
-    shiny
+    shiny,
+    processx,
+    attempt,
+    DT,
+    glue,
+    htmltools
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
