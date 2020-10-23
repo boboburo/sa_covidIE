@@ -1,8 +1,8 @@
 Package: covidIE
-Title: COVID IRELAND DASHBOARD
+Title: Covid Irealdn Dashboard
 Version: 0.0.0.9000
-Authors@R: person('Brian', 'Carter', email = 'brianthomascarter@gmail.com', role = c('cre', 'aut'))
-Description: Shiny application to display COVID Irleand numbers.
+Authors@R: person('Brian ', 'Carter', email = 'brianthomascarter@gmail.com', role = c('cre', 'aut'))
+Description: R Shiny App to review COVID situation in Ireland.
 License: What license is it under?
 Imports: 
     config,
@@ -12,7 +12,21 @@ Imports:
     attempt,
     DT,
     glue,
-    htmltools
+    htmltools,
+    lubridate,
+    ggplot2,
+    dplyr,
+    DBI,
+    RSQLite,
+    janitor,
+    RcppRoll,
+    tidyr,
+    stringr,
+    Rcpp,
+    scales,
+    ggrepel,
+    reactlog,
+    shinythemes
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
@@ -21,3 +35,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Depends: 
+    R (>= 2.10)

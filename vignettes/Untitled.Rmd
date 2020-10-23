@@ -1,0 +1,30 @@
+---
+title: "test_this_out"
+author: "Brian Carter"
+date: "10/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+f_date <- lubridate::ymd("2020-07-31")
+
+
+
+
+plt <- dailycases %>%
+  filter(county_name == "Kildare") %>%
+      dplyr::filter(time_stamp <= f_date) %>%
+      dplyr::filter(time_stamp >= (f_date- lubridate::days(30))) %>%
+      ggplot2::ggplot(aes(x = time_stamp)) +
+      ggplot2::geom_line(aes(y = plt1_y , color = "red")) +
+      ggplot2::geom_line(aes(y = plt1_y, color = "blue"))
+
+plt
+```
+

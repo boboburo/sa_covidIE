@@ -15,17 +15,32 @@
 
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
-usethis::use_package( "thinkr" ,"lubridate", "ggplot2","dplyr")
+usethis::use_package( "thinkr")
+usethis::use_package("lubridate")
+usethis::use_package("ggplot2")
+usethis::use_package("dplyr")
+usethis::use_package("DBI")
+usethis::use_package("RSQLite")
+usethis::use_package("janitor")
+usethis::use_package("RcppRoll")
+usethis::use_package("tidyr")
+usethis::use_package("stringr")
+usethis::use_package("Rcpp")
+usethis::use_package("scales")
+usethis::use_package("ggrepel")
+usethis::use_package("reactlog")
+usethis::use_package("shinythemes")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module( name = "name_of_module1" ) # Name of the module
-golem::add_module( name = "name_of_module2" ) # Name of the module
+#golem::add_module( name = "dataviz_bar" ) # Name of the module
+#golem::add_module(name = "dataviz_scatter")
+
 
 ## Add helper functions ----
 ## Creates ftc_* and utils_*
-golem::add_fct( "helpers" ) 
-golem::add_utils( "helpers" )
+#golem::add_fct(name = "focus_day")
+golem::add_fct(name = "load_data")
 
 ## External resources
 ## Creates .js and .css files at inst/app/www
